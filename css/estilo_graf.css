@@ -1,0 +1,180 @@
+#canvas_container {
+  width: 1000px; /* Define el ancho deseado del contenedor */
+  /* Define la altura deseada del contenedor */
+  overflow: auto; /* Permite el scroll horizontal y vertical cuando el contenido excede el tamaño */
+  padding: 10px; /* Opcional: agrega un espacio alrededor del contenedor */
+  
+  border:2px solid red ; 
+}
+#autor{
+  font-size: 25px;
+}
+#grafico {
+ /* Cambia "blue" por el color que desees */
+ 
+}
+
+.seleccionador{
+  width :250px;
+  height: 40px;
+  background:radial-gradient( #21F075 40%,#058238);
+  background-color: #71FD44;
+  color: black;
+  margin: 5px;
+  font-family: Times New Roman,Arial;
+  font-size: 25px;
+  padding: 2px;
+  font-weight: bold;
+  border-radius: 20%;
+  border:2px solid white ; 
+  text-align: center;
+}
+
+#estilos_graf{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px; /* Ajusta el valor según la distancia deseada */
+}
+#fila_conv{
+  display:flex;
+}
+
+.graf_button,.domx,.funcion_entry{
+  
+  border:solid 4px black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 5px; /* Margen superior */
+  margin-bottom: 5px; /* Margen inferior */
+  margin-left: 5px; /* Margen izquierdo */
+  margin-right: 5px; /* Margen derecho */
+  font-family: Times New Roman, Arial;
+}
+.graf_button:hover  {
+    background:radial-gradient( circle,#FC2A2A 40%,#CB0202);
+    transition: all .3s;
+}
+.funcion_entry{
+  width:500px;
+}
+.graf_button{
+  background: #FC3939;
+  box-sizing: content-box;
+  width:200px;
+  border-radius: 20%;
+}
+.domx{
+  width:100px;
+  height:50px;
+}
+.class_celda{
+  background: #FFFFFF;
+}
+.casilla {
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Times New Roman, Arial;
+}
+#todo_m{
+  display: flex;
+
+}
+#operaciones_m{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boton_m{
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Times New Roman, Arial;
+  margin: 5px;
+
+}
+.salida_m{
+  width: 400px;
+  height: 150px;
+  text-align: right;
+  font-size: 20px;
+  font-family: Times New Roman, Arial;
+}
+.boton_m2{
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Times New Roman, Arial;
+}
+.potencia_m{
+   width: 42px;
+}
+.fila_final{
+  display: flex;
+}
+/*.matriz_parent{
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  
+}
+.parentes1{
+  margin: 0px;
+}*/
+.orden_m{
+  width: 80px;
+  height: 30px;
+}
+#cabeza_m{
+  display: flex;
+}
+#cabeza_m label,
+#cabeza_m input,
+#cabeza_m button {
+  margin: 0 10px; /* Añadir un margen de 10px en los lados izquierdo y derecho de cada elemento */
+    font-size: 20px;
+}
+
+.bot_lim{
+  width: 40px;
+  height: 30px;
+  border:solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parents{
+  display: flex;
+      align-items: center; /* Centrar verticalmente el contenido */
+    margin: 0;
+    padding: 0;
+}
+.parentes1{
+  flex: 1; /* Expandir el contenido para ocupar todo el espacio disponible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      margin: 0;
+    padding: 0;
+}
+.orden_m{
+   font-weight: bold;
+  font-size: 20px;
+      text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+#size2{
+   width: 140px;
+}
+#inputExpression,#result{
+  font-size: 30px;
+}

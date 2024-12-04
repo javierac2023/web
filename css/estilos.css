@@ -1,0 +1,245 @@
+@font-face{
+	font-family:LetraCalculadora;
+	src: url("../fonts/Calculator.ttf");
+}
+
+td{
+	background: #000000;
+	
+}
+h1{
+	font-family: Georgia,Times New Roman,Arial;
+	color: #0018C7;*/
+	font-size: 50px;
+	/*background-color: #0D0540;LetraCalculadora,*/
+
+}
+#entr{
+      border: 2px solid green;
+
+}
+ #div1 {
+    display: flex;
+    flex: 60;
+    width: 60%;
+    height: 600px;
+    background: #353535;
+}
+.entradax{
+	width: 100%;
+	margin-top: 2px; /* Margen superior */
+ 	margin-bottom: 8px; /* Margen inferior */
+  	margin-left: 2px; /* Margen izquierdo */
+  	margin-right: 2px; /* Margen derecho */
+	background: #FFFFFF;
+	font-family: Arial,Times New Roman,Arial;
+	font-size: 30px;
+	font-weight: bold;
+	border-radius: 2%;
+	border:5px solid black ;
+
+}
+
+
+#div2 {
+    background: #353535;
+    display: inline-block;
+    width: 40%;
+    height: 600px;
+    
+    }
+#formulario{
+      display:flex;
+      width: 100%;
+}
+.fila_button{
+	display: flex;
+	justify-content: space-evenly;
+	height: 13%;
+	width:  100%;
+	margin-top: 5px; /* Margen superior */
+ 	margin-bottom: 5px; /* Margen inferior */
+}
+.bot,.botrosa,.botamarillo,.botigual,.botflecha,.botcifras{
+	flex-grow:1;
+	width :15%;
+  	height: 100%;
+  	padding: 4px;
+  	margin-top: 2px; /* Margen superior */
+ 	margin-bottom: 2px; /* Margen inferior */
+  	margin-left: 5px; /* Margen izquierdo */
+  	margin-right: 5px; /* Margen derecho */
+}
+.bot,.botamarillo ,.botflecha,.botigual ,.botrosa,.botcifras{font-family: Georgia, Arial;
+  		font-weight: bold;
+  		border-radius: 40%;
+  	}
+
+.bot {
+/*  aspect-ratio: 1/1;*/
+  color: white;
+  font-size: 25px;
+  border: 2px solid white;
+  background: radial-gradient(circle, black 40%, #5F5F5F);
+}
+.botamarillo {
+  background:radial-gradient( circle,#E39514 40%,#FBC945);
+  transition: all .3s;
+  color: white;
+  font-size: 25px;
+  border:2px solid white ;
+}
+.bot:hover {
+/*    background: linear-gradient(180deg, #fbde74 0%, #ff9900 100%);*/
+    background:radial-gradient( circle,#E39514 40%,#FBC945);
+    transition: all .3s;
+}
+.botflecha,
+.botigual{
+background:radial-gradient( #058238 40%,#21F075);
+  transition: all .3s;
+  color: white;
+  margin: 5px;
+  font-size: 25px;
+  padding: 2px;
+  border:2px solid white ;
+}
+.botrosa{
+background:radial-gradient( circle,#9F0343 40%,#FC589B);
+  transition: all .3s;
+  color: white;
+  font-size: 25px;
+  border:2px solid white ;
+}
+.botcifras{
+	background:radial-gradient( #058238 40%,#21F075);
+	color: white;
+	font-size: 15px;
+	border:2px solid white ; 
+	white-space: normal; 
+}
+.botigual:hover,.botflecha:hover,.botcifras:hover   {
+    background:radial-gradient( circle,black 40%,#5F5F5F);
+    transition: all .3s;
+}
+
+.botamarillo:hover  {
+    background:radial-gradient( circle,black 40%,#5F5F5F);
+    transition: all .3s;
+}
+
+.botrosa:hover  {
+    background:radial-gradient(circle,black 40%,#5F5F5F);
+    transition: all .3s;
+}
+#cantidad_cifras2 option {  /*solo se aplica a un selected llamando a su id*/
+/*  background: #303030; color de la lista desplegable*/ 
+}
+.sub2 {
+  position: relative;
+  font-size: 15px;
+  top:0.6em;
+  left: 0.2em;
+}
+.sub {
+  position: relative;
+  font-size: 15px;
+  top:0.4em;
+  right: 0.6em;
+}
+.sup {
+  position: relative;
+  font-size: 15px;
+  bottom:0.9em;
+  left: 0.2em;
+}
+.contacto{
+	width: 600px;
+	height: 200px;
+	border:solid 3px black;
+	font-size: 20px;
+	font-family: Times New Roman, Arial;
+
+}
+.letra{
+	font-family: Times New Roman,Arial;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Times New Roman, Arial;
+}
+.botenviar{
+/*	background: linear-gradient(180deg, #686767, #3C3C3C );*/
+	background:radial-gradient( circle,black 40%,#5F5F5F);
+/*	transition: all .9s;*/
+	width :100px;
+	height: 60px;
+	color: white;
+/*	//brightness(valor)*/
+	margin: 5px;
+	font-family: Times New Roman,Arial;
+	font-size: 25px;
+	padding: 2px;
+	font-weight: bold;
+	border-radius: 40%;
+	border:2px solid white ; /*grosor tipo de linea y color de linea*/
+}
+.botenviar:hover {
+/*    background: linear-gradient(180deg, #fbde74 0%, #ff9900 100%);*/
+    background:radial-gradient( circle,#E39514 40%,#FBC945);
+    transition: all .3s;
+}
+.correo{
+	width: 600px;
+	height: 20px;
+	border:solid 3px black;
+	height: 30px;
+	font-size: 20px;
+	font-family: Times New Roman, Arial;
+
+}
+.tabladerecha{
+	
+	border: black;
+	width:350px;
+
+	float: left;
+	height: auto;
+}
+.tablaizquierda{
+	float: left;
+}
+
+#formulas{
+	font-size: 35px;
+	font-family: Times New Roman, Arial;
+}
+
+.img_menu{
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  text-align: right;
+  align-items: center;
+
+}
+
+.dropdown-list {
+  display: none;
+}
+.dropdown-list.show {
+  display: block;
+  text-align: right;
+}
+#helpme {
+  text-align: right;
+}
+.ayuda{
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+
+}
+.con_rayas {
+            text-decoration: overline; /* Aplica la línea sobre el texto */
+ }

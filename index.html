@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Calculadora</title>
+	<meta name="author" content="Javier Aguilar Collanqui" lang="es">
+	<meta name="description" content="Calculadora cientifica en HTML">
+	<meta name="keywords" content="Calculadora,Calculator,HTML5,CSS">
+
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo_graf.css">
+	<link rel="shortcut icon" type="Imagenes/x-icon" href="logo\logo.ico">
+
+</head>
+<body>
+	<h1 >CALCULADORA.v12</h1>
+	<form id="formulario" name="formulario">
+      <div id="div1">
+      <textarea id="entradaid" class="entradax"  type="textarea" name="entrada"  placeholder=">>"></textarea> 
+      </div>
+      <div id="div2">
+      	<div class="fila_button"> 
+		      <button class="bot" type="button" onclick="document.formulario.entrada.value+=1;rec_foco()">1</button>
+		      <button class="bot" type="button"  onclick="document.formulario.entrada.value+=2;rec_foco()">2</button>
+		      <button class="bot" type="button"  onclick="document.formulario.entrada.value+=3;rec_foco()">3</button>
+		      <button class="botamarillo" type="button"  onclick="document.formulario.entrada.value+='+';rec_foco()">+</button>
+		      <button class="bot" type="button"  onclick="document.formulario.entrada.value+='√(';rec_foco()">√</button>
+		      <button class="botrosa" type="button" >MS</button>
+		      
+      	</div>
+      <div class="fila_button">
+      	<button class="bot" type="button"  onclick="document.formulario.entrada.value+=4;rec_foco()">4</button>
+      <button class="bot" type="button"  onclick="document.formulario.entrada.value+=5;rec_foco()">5</button>
+      <button class="bot" type="button"  onclick="document.formulario.entrada.value+=6";rec_foco()>6</button>
+      <button class="botamarillo" type="button"  onclick="document.formulario.entrada.value+='-';rec_foco()">-</button>
+      <button class="bot" type="button"  onclick="document.formulario.entrada.value+='^';rec_foco()">^</button>
+      <button class="botrosa" type="button" value="ANS" onclick="bans();rec_foco()">ANS</button>
+      </div>
+   
+
+      <div class="fila_button">
+      	<button class="bot" type="button"  onclick="document.formulario.entrada.value+=7;rec_foco()">7</button>
+      <button class="bot" type="button"  onclick="document.formulario.entrada.value+=8;rec_foco()">8</button>
+      <button class="bot" type="button"  onclick="document.formulario.entrada.value+=9;rec_foco()">9</button>
+      <button class="botamarillo" type="button"  onclick="document.formulario.entrada.value+='*';rec_foco()">*</button>
+      <button class="bot" type="button" onclick="document.formulario.entrada.value+='π';rec_foco()">π</button>
+      <button class="botrosa" type="reset" value="C">C</button>
+  	  </div>
+
+      <div class="fila_button">
+      	<button class="bot" type="button"  onclick="document.formulario.entrada.value+='(';rec_foco()">(</button>
+        <button class="bot" type="button" onclick="document.formulario.entrada.value+=0;rec_foco()">0</button>
+        <button class="bot" type="button" onclick="document.formulario.entrada.value+=')';rec_foco()">)</button>
+        <button class="botamarillo" type="button" onclick="document.formulario.entrada.value+='/';rec_foco()">/</button>
+        <button class="bot" type="button"  onclick="document.formulario.entrada.value+='e';rec_foco()">e</button>
+        <button class="bot" type="button" value="•" onclick="document.formulario.entrada.value+='.';rec_foco() ">•</button>
+      </div>
+
+      <div class="fila_button">
+      	<button class="botamarillo" type="button" onclick="document.formulario.entrada.value+='sin(';rec_foco()">sin</button>
+        <button class="botamarillo" type="button"  onclick="document.formulario.entrada.value+='cos(';rec_foco()">cos</button>
+        <button class="botamarillo" type="button"  onclick="document.formulario.entrada.value+='tan(';rec_foco()">tan</button>
+        <button class="botamarillo" type="button" onclick="document.formulario.entrada.value+='Log';rec_foco()">Log<sub>n</sub></button>
+        <button class="bot" type="button" onclick="document.formulario.entrada.value+='fact(';rec_foco()">!</button>  
+        <button class="botigual" type="button"  onclick="operar(0)">=</button>
+      </div>
+        <div class="fila_button">
+	      <button class="botamarillo" type="button" onclick="document.formulario.entrada.value+='asin(';rec_foco()">asin</button>
+	      <button class="botamarillo" type="button"  onclick="document.formulario.entrada.value+='acos(';rec_foco()">acos</button>
+	      <button class="botamarillo" type="button"  onclick="document.formulario.entrada.value+='atan(';rec_foco()">atan</button>
+	      <button class="botamarillo" type="button"  onclick="document.formulario.entrada.value+='Ln(';rec_foco()">Ln</button>  
+	      <button class="bot" type="button" onclick="document.formulario.entrada.value+='comb(';rec_foco()"
+	      >C<span class="sup">m</span><span class="sub">n</span>
+	      </button>  
+	      <button class="botflecha" type="button" value="⇦" onclick="borrar()">⇦</button>
+         </div>
+      <div class="fila_button">
+      	<button class="botamarillo" type="button"  onclick="document.formulario.entrada.value+='sinh('";rec_foco()>sinh</button> 
+        <button class="botamarillo" type="button" onclick="document.formulario.entrada.value+='cosh(';rec_foco()">cosh</button> 
+        <button class="botamarillo" type="button"  onclick="document.formulario.entrada.value+='tanh(';rec_foco()">tanh</button> 
+        <button class="bot" type="button" value="+/-" onclick="document.formulario.entrada.value+='convert(';rec_foco()">
+        	<span class="con_rayas">xyz</span><span class="sub2">n</span>
+        </button>
+        <button class="bot" type="button" value="+/-" onclick="bmm();rec_foco()">+/-</button>
+        <button class="bot" type="button" onclick="document.formulario.entrada.value+='atan2(';rec_foco()">atan2</button>
+
+        
+      </div>
+      
+      </div>
+    </form>
+
+    <div id="helpme" class="dropdown">
+
+		  	<button class="dropdown-button" onclick="toggleDropdown()">
+		  		<div class="img_menu">
+		  			<img src="logo/config.png" alt="Texto alternativo" width="30px" height="30px">
+				 MENU
+		  		</div>
+				 
+			  </button>
+
+				<div class="dropdown-list">
+					    <button class="ayuda" type="button"  onclick="abrirVentana()">HELP</button> 
+
+					    <select  class="ayuda" id="cantidad_cifras2" onchange="cifras()">
+			        	<option selected="true" disabled="disabled" value="0">Cantidad de cifras</option> 
+			        	<option value="1">1</option>
+			        	<option value="2">2</option>
+			        	<option value="3">3</option>
+			        	<option value="4">4</option>
+			        	<option value="5">5</option>
+			        	<option value="6">6</option>
+			        	<option value="7">7</option>
+			        	<option value="8">8</option>
+			       	</select>
+
+    	  			<select  class="ayuda" id="tam_fuente" onchange="size_font()">
+			        	<option selected="true" disabled="disabled" value="30">Size</option> 
+			        	<option value="30">30</option>
+			        	<option value="32">32</option>
+			        	<option value="34">34</option>
+			        	<option value="36">36</option>
+			        	<option value="38">38</option>
+			        	<option value="40">40</option>
+			        	<option value="42">42</option>
+			        	<option value="44">44</option>
+			       	</select>
+
+    	  			<input type="color" id="color_font" class="ayuda" onchange="color_font()" value="#000000"  ></input > 
+		  			</div>
+		</div>
+
+  	<h2>GRÁFICO DE UNA FUNCIÓN</h2>
+  	<div id="fila_conv">
+  		<input id="xmin" placeholder="xmin" type="text" class="domx" >
+    	<input id="xmax" placeholder="xmax" type="text" class="domx" >
+  		<input id="funcion_entrada" type="text" class="funcion_entry" value="cos(3x)+2*pi-sin(x)*e^x" >
+  		<button id="graficax" type="button"  class="graf_button">GRAFICAR</button> 
+  		<button id="ocultarx" type="button"  class="graf_button">OCULTAR</button>   
+  		<input placeholder="0.1" type="text" class="domx" id="delta">
+  	</div>
+
+  	<div id ="estilos_graf" >	
+  		<select  class="seleccionador" id="grosor_linea" onchange="grosor_linea() " style="display: none">
+  			<option selected="true" disabled="disabled" value="3">Grosor línea</option> 
+  			<option value="1">1</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+		</select>
+	
+		<select  class="seleccionador" id="tam_marcador" onchange="tama_marcador()" style="display: none">
+  			<option selected="true" disabled="disabled" value="2">Tamaño marcador</option>
+  			<option value="0">0</option> 
+  			<option value="1">1</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5</option>
+  			<option value="6">6</option>
+  			<option value="7">7</option>
+		</select>
+		<select  class="seleccionador" id="marcador_linea" onchange="marcador_linea()" style="display: none">
+  			<option selected="true" disabled="disabled" value="circle">Línea</option> 
+  			<option value="circle">Círculo</option>
+			<option value="triangle"> Triángulo</option>
+			<option value="rect"> Rectángulo</option>
+			<option value="rectRounded"> Rectángulo redondeado</option>
+			<option value="rectRot"> Rectángulo rotado</option>
+			<option value="cross"> Cruz</option>
+			<option value="crossRot"> Cruz rotada</option>
+			<option value="star"> Estrella</option>
+			<option value="line"> Línea</option>
+			<option value="dash"> Guión</option>
+
+		</select>
+		<div id="scrolls" style="display: none" >
+			<input id="h_Scrollbar" class="scrollbar"  style="display: none" ></input >
+		</div>
+		
+		<input type="color" id="colorPicker" style="display: none" value="#F90000" ></input > 
+	</div>
+
+
+
+  	<div id="canvas_container" style="display: none"  >
+  		<canvas id="grafico"></canvas>
+  	</div>
+  	
+	<h2>OPERACIONES CON MATRICES</h2>
+  	<div id="cabeza_m">
+  			<label for="size">Matriz de orden :</label>
+   		 	<input type="number" id="size" min="2" max="12" class="orden_m">
+    		<button class="orden_m"  id="size2"onclick="crearTabla()">Crear Matriz</button>
+    		
+    		<button class="bot_lim" onclick="Limpiar_m()">
+		  			<img src="logo/escoba.png" width="30px" height="30px">
+		  		</button>
+    		</button>
+  	</div>
+		
+
+    <br>
+    
+    <div id="todo_m">
+		    	
+		    	<div class="parents">
+				    	<div class="parentes1" id="parents1" style="display: none" >(</div>
+				    	<div id="tabla-container">
+							        <!-- Aquí se insertará la tabla generada dinámicamente -->
+							</div>
+							<div class="parentes1" id="parents2"  style="display: none">)</div>
+		    	</div>
+    			
+    	<div id="operaciones_m">
+    		<button class="boton_m" onclick="Determinante()">Determinante</button>
+    		<button class="boton_m" onclick="Inversa()">Inversa</button>
+    		<button class="boton_m" onclick="GaussJordan()">Gauss Jordan</button>
+
+    		<div class="fila_final">
+    			<button class="boton_m2" onclick="Potencia()">Potencia</button>
+    			<input type="number" class="potencia_m">
+    		</div>
+    	</div>
+    	<div>
+    		<textarea class="salida_m" name="entrada_m" type="textarea" ></textarea> 
+    	</div>
+    
+    </div>
+    
+  	<h2>DERIVADAS</h2>
+  	<textarea id="inputExpression" rows="1" cols="50">x^(3+y)+6+4*x</textarea>
+    <button onclick="calcularDerivada()">Calcular Derivada</button>
+    <p >Derivada :</p>
+    <p id="result"></p>
+
+
+
+
+    <div id="autor"> 
+    	Created by Javier Aguilar
+  	<br>
+  	 contact: jacmatematicainfo@gmail.com
+    </div>
+  	
+
+  	<script src="js/grafico.js"> </script>
+  	<!-- <input type="range" id="zoomRange" min="1" max="10" step="1" value="5"> -->
+
+
+
+
+
+
+<!-- 	<div id="tablaizquierda" class="tablaizquierda" >
+		<table >
+		<tr align="left">
+    	<th  align="left">
+			<form action="https://formsubmit.co/jacmatematicainfo@gmail.com" method="POST" >
+	  		<label class="letra">Contacto o sugerencia :</label>
+	  		<br>
+	  		<br>
+			<label class="letra">Coloque su correo:</label>  <br>
+
+			<input type="email" name="email" class="correo" placeholder="ejemplo@email.com" required>
+
+			<br><br>
+			<label class="letra">Mensaje:</label>
+			<br>
+			<br>
+			<textarea placeholder="......"  class="contacto" name="message" rows="10" required></textarea>
+			
+			<br>
+
+			<input class="botenviar" type="submit" value="Enviar">
+
+	  		</form>
+	  	</th>
+  		</tr>
+		</table>
+		
+	</div> -->
+
+	
+
+  	
+<script src="js/codigo.js"> </script>
+<script src="js/matrices.js"> </script>
+
+<!-- para agregar graficos -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- para latex -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.1.0/math.min.js"></script>
+
+
+</body>
+</html>
